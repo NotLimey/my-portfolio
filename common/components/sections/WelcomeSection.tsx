@@ -12,7 +12,12 @@ const WelcomeSection = () => {
                     <Button onClick={() => { }} text="Get to know me" className="mt-32" />
                 </div>
                 <div>
+                    <div className="relative">
+                        <div className="absolute border -left-5 -bottom-5 border-secondary-normal w-96 h-96 -z-10 border-2">
 
+                        </div>
+                        <img src="/images/martinkmyhre.png" alt="" className="w-96 h-96" />
+                    </div>
                 </div>
             </div>
         </div>
