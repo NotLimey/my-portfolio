@@ -5,7 +5,7 @@ import WelcomeSection from '../common/components/sections/WelcomeSection'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className='mx-8'>
       <WelcomeSection />
     </div>
   )
