@@ -18,16 +18,12 @@ const WelcomeSection = () => {
                         <p className="font-light text-secondary-normal text-lg">FULLSTACK DEVELOPER</p>
                         <Button onClick={() => { }} text="Get to know me" className="mt-32" />
                     </div>
-                    <div>
-                        <div className="relative">
-                            <div className="absolute border -left-5 -bottom-5 border-secondary-normal w-96 h-96 -z-10 border-2">
-
-                            </div>
-                            <img src="/images/martinkmyhre.png" alt="" className="w-96 h-96" />
-                        </div>
+                    <div className="relative">
+                        <div className="absolute -left-5 -bottom-5 border-secondary-normal w-96 h-96 -z-10 border-2" />
+                        <img src="/images/martinkmyhre.png" alt="" className="w-96 h-96" />
                     </div>
                 </div>
-                <p className="mb-8 text-center uppercase -tracking-tighter font-light">Scroll</p>
+                <p className="mb-8 text-center uppercase tracking-widest font-light text-sm">Scroll</p>
             </div>
         </div>
     );
