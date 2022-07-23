@@ -18,7 +18,7 @@ const CursorTool = () => {
             };
 
     return (
-        <div className="fixed">
+        <div className="fixed z-50">
             <div
                 className={classNames(
                     "absolute w-12 h-12 border-white/30 top-0 border-2 rounded-full z-50 mouse-pet flex justify-center items-center",
