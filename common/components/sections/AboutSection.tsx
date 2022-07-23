@@ -5,7 +5,7 @@ const AboutSection = () => {
     return (
         <div className="w-full flex justify-center">
             <div className="max-w-5xl my-24">
-                <div className="mb-10 relative">
+                <div className="mb-32 relative">
                     <img
                         src="/svgs/Frame5.svg"
                         alt=""
@@ -32,7 +32,7 @@ const AboutSection = () => {
                         className="absolute dots-right"
                     />
                     <h2 className="text-2xl font-semibold mb-2 text-right">
-                        A quick introduction
+                        Limeyfy
                     </h2>
                     <p className="text-xl text-white/80 text-right">
                         <LinkText
