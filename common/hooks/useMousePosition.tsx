@@ -20,7 +20,6 @@ const useMousePosition = () => {
         };
         const handleMouseLeave = () => {
             setMousePosition({ x: 0, y: 0 });
-            console.log("mouseleave")
         };
         window.addEventListener('mousemove', updateMousePosition);
         window.addEventListener("mouseout", handleMouseLeave);
