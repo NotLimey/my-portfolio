@@ -9,15 +9,19 @@ const CursorTool = () => {
     const prefersReducedMotion = usePrefersReducedMotion();
 
     const transform: null | CSSProperties =
-        prefersReducedMotion || mousePosition.x === null
+        prefersReducedMotion ||
+        mousePosition.x === null ||
+        mousePosition.y === null
             ? {}
             : {
-                transform: `translate(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
-                display:
-                    mousePosition.x === 0 && mousePosition.y === 0
-                        ? 'none'
-                        : 'flex',
-            };
+                  transform: `translate(${mousePosition.x + 5}px) translateY(${
+                      mousePosition.y + 5
+                  }px)`,
+                  display:
+                      mousePosition.x === 0 && mousePosition.y === 0
+                          ? 'none'
+                          : 'flex',
+              };
 
     return (
         <div className="fixed z-50">
