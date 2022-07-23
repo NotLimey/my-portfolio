@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Button from '../Button';
 import LinkText from '../LinkText';
 
 const AboutSection = () => {
@@ -25,7 +26,7 @@ const AboutSection = () => {
                         thinking new and solving problems.{' '}
                     </p>
                 </div>
-                <div className="mb-10 relative">
+                <div className="mb-10 relative flex flex-col items-end">
                     <img
                         src="/svgs/Frame5.svg"
                         alt=""
@@ -64,6 +65,13 @@ const AboutSection = () => {
                         <LinkText text="email" to="mailto:mkm@limeyfy.no" />{' '}
                         without any commitments.
                     </p>
+                    <Button
+                        text="Check it out"
+                        className="mt-8"
+                        onClick={() =>
+                            window.open('https://limeyfy.com', '_blank')
+                        }
+                    />
                 </div>
             </div>
         </div>
