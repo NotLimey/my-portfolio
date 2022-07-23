@@ -9,7 +9,7 @@ interface ButtonProps {
 
 const Button = ({ onClick, text, className }: ButtonProps) => {
     return (
-        <button onClick={onClick} className={classNames("border border-secondary-normal px-6 py-2 rounded-sm button-animation", className)}> <span>{text}</span></button >
+        <button onClick={onClick} className={classNames("border border-secondary-normal px-6 py-2 rounded-sm button-animation", className)}> <span id="button-text">{text}</span></button >
     );
 }
 
