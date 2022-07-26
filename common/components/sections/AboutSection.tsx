@@ -6,7 +6,7 @@ const AboutSection = () => {
     return (
         <div className="w-full flex justify-center">
             <div className="max-w-5xl my-24">
-                <div className="mb-32 relative">
+                <div className="mb-32 relative" data-aos="fade-right">
                     <img
                         src="/svgs/Frame5.svg"
                         alt=""
@@ -26,7 +26,10 @@ const AboutSection = () => {
                         thinking new and solving problems.{' '}
                     </p>
                 </div>
-                <div className="mb-10 relative flex flex-col items-end">
+                <div
+                    className="mb-10 relative flex flex-col items-end"
+                    data-aos="fade-left"
+                >
                     <img
                         src="/svgs/Frame5.svg"
                         alt=""

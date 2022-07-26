@@ -10,7 +10,7 @@ const Experience = ({
     description,
 }: ExperienceProps) => {
     return (
-        <div className="flex justify-start">
+        <div className="flex justify-start" data-aos="fade-up">
             <div className="min-h-max flex flex-col items-center mr-6">
                 <div>
                     <div className="w-6 h-6 border-2 border-secondary-normal rounded-full" />
