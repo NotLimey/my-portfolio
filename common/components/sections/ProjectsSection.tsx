@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { classNames } from '../../scripts/tailwind';
 import Container from '../layout/Container';
+import Project from '../Project';
 
 type TabType = {
     name: string;
@@ -24,7 +25,7 @@ const ProjectsSection = () => {
                 Projects
             </h2>
             <div>
-                <div className="sm:hidden">
+                <div className="sm:hidden mt-2">
                     <label htmlFor="tabs" className="sr-only">
                         Select a tab
                     </label>
@@ -32,7 +33,7 @@ const ProjectsSection = () => {
                     <select
                         id="tabs"
                         name="tabs"
-                        className="block w-full focus:ring-secondary-normal focus:border-secondary-normal border-gray-300 rounded-md"
+                        className="block w-full focus:ring-secondary-normal focus:border-secondary-normal border-primary/90 bg-white/10 py-2 px-1 rounded-md"
                         defaultValue={
                             tabs.find((_, i) => i === activeTab)?.name ??
                             tabs[0].name
@@ -67,6 +68,13 @@ const ProjectsSection = () => {
                         ))}
                     </nav>
                 </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-6">
+                <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
             </div>
         </Container>
     );
