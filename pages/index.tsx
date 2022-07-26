@@ -6,6 +6,7 @@ import ExperienceSection from '../common/components/sections/ExperienceSection';
 import Footer from '../common/components/sections/Footer';
 import ProjectsSection from '../common/components/sections/ProjectsSection';
 import WelcomeSection from '../common/components/sections/WelcomeSection';
+import SocialMedia from '../common/components/SocialMedia';
 import useMousePosition from '../common/hooks/useMousePosition';
 
 const Home: NextPage = () => {
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
             <ExperienceSection />
             <ProjectsSection />
             <Footer />
+            <SocialMedia />
         </div>
     );
 };
