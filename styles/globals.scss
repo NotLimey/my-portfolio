@@ -92,12 +92,14 @@ body {
 
 .loading-animation-leave-to {
     transform: translateY(-50vh);
+    display: hidden;
 }
 
 .loading-animation-leave-from-reverse {
-    transform: translateY(50vh);
+    transform: translateY(0px);
 }
 
 .loading-animation-leave-to-reverse {
-    transform: translateY(100vh);
+    transform: translateY(50vh);
+    display: hidden;
 }
