@@ -1,7 +1,8 @@
+import { auth } from '@/db/firebase';
+import db from '@/db/firebase-admin';
 import { Project } from 'common/types';
-import db from '../firebase-admin';
 
-const getAllProjects = async (): Promise<Project[]> => {
+const getAllProjects = async (token?: string | null): Promise<Project[]> => {
     const snapshot = await db.collection('projects').get();
 
     const data: any[] = [];
@@ -16,6 +17,11 @@ const getAllProjects = async (): Promise<Project[]> => {
     return data;
 }
 
+const addProject = async (token: string) => {
+    const user = await auth.currentUser;
+    console.log(user)
+}
+
 export {
     getAllProjects
-}
+};
