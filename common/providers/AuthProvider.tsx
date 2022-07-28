@@ -1,3 +1,4 @@
+import Loading from '@/components/Loading';
 import { User } from 'firebase/auth';
 import { useRouter } from 'next/router';
 import { createContext } from 'react';
@@ -18,13 +19,11 @@ const AuthContext = createContext<AuthProviderProps>({
 
 const AuthProvider = (value: AuthProviderProps) => {
     const router = useRouter();
-    if (value.isLoading && router.pathname != '/') {
-        return <div>Loading...</div>;
-    }
 
     return (
         <AuthContext.Provider value={value}>
-            {value.children}
+            <Loading isLoading={value.isLoading} />
+            {!value.isLoading && value.children}
         </AuthContext.Provider>
     );
 };

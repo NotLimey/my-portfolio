@@ -13,6 +13,10 @@ module.exports = {
           normal: "#62D2A2",
           dark: "#1FAB89"
         },
+      },
+      transitionDuration: {
+        '0': '0ms',
+        '2000': '2000ms',
       }
     },
     fontFamily: {

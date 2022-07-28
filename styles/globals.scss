@@ -85,3 +85,19 @@ body {
         filter: grayscale(0%);
     }
 }
+
+.loading-animation-leave-from {
+    transform: translateY(0px);
+}
+
+.loading-animation-leave-to {
+    transform: translateY(-50vh);
+}
+
+.loading-animation-leave-from-reverse {
+    transform: translateY(50vh);
+}
+
+.loading-animation-leave-to-reverse {
+    transform: translateY(100vh);
+}

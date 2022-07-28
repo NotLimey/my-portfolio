@@ -8,18 +8,20 @@ const useClientAuth = (
 ): [User | null | undefined, boolean, boolean] => {
     const [user, userLoading] = useAuthState(auth);
     const [admin, setAdmin] = useState(false);
+    const [adminLoading, setAdminLoading] = useState(true);
 
     useEffect(() => {
         if (user) {
             const loadAdmin = async () => {
                 const admin = await isAdminClient(user.uid);
                 setAdmin(admin);
+                setAdminLoading(false);
             };
             loadAdmin();
         }
     }, [user]);
 
-    return [user, userLoading, admin];
+    return [user, userLoading || adminLoading, admin];
 };
 
 export default useClientAuth;
