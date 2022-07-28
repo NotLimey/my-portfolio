@@ -2,14 +2,14 @@ import Loading from '@/components/Loading';
 import { User } from 'firebase/auth';
 import { createContext } from 'react';
 
-interface AuthProviderProps {
+export interface AuthProviderProps {
     children: React.ReactNode;
     user: User | null | undefined;
     isLoading: boolean;
     isAdmin: boolean;
 }
 
-const AuthContext = createContext<AuthProviderProps>({
+export const AuthContext = createContext<AuthProviderProps>({
     children: null,
     user: null,
     isLoading: false,
