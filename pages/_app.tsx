@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             duration: 1000,
             once: true,
         });
+        console.log('rerender');
     }, []);
 
     return (

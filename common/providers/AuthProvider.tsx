@@ -1,6 +1,6 @@
 import Loading from '@/components/Loading';
 import { User } from 'firebase/auth';
-import { createContext } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 export interface AuthProviderProps {
     children: React.ReactNode;
@@ -17,9 +17,17 @@ export const AuthContext = createContext<AuthProviderProps>({
 });
 
 const AuthProvider = (value: AuthProviderProps) => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        if (!value.isLoading) {
+            setTimeout(() => setIsLoading(false), 200);
+        }
+    }, [value.isLoading]);
+
     return (
         <AuthContext.Provider value={value}>
-            <Loading isLoading={value.isLoading} />
+            <Loading isLoading={isLoading} />
             <div>{value.children}</div>
         </AuthContext.Provider>
     );
